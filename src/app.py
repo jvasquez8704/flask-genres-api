@@ -14,7 +14,7 @@ def loading_config():
     print('GENRES API STARTED!')
 
 
-api.add_resource(Genre, '/genres')
+api.add_resource(Genre, '/list')
 
 
 if __name__ == '__main__':

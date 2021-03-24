@@ -10,10 +10,5 @@ class Startup:
     app = Flask(__name__)
     CORS(app)
     app.config['PROPAGATE_EXCEPTIONS'] = True
-    app.secret_key = Configuration.APP_SECRET_KEY
     app.logger.addHandler(logging.StreamHandler())
     app.logger.setLevel(logging.INFO)
-
-    # Session config for future implementation (not work right now)
-    app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
-    app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
